@@ -27,6 +27,7 @@ The kit user buttons are used to change the volume of the audio played through P
 ![](../images/playback-block-diagram.png)
 
 The KIT_PSE84_EVAL kit comes with a digital microphone and TLV320DAC1300 audio codec. The PDM/PCM hardware block of PSOC&trade; Edge MCU device converts this digital signal to a quantized 16-bit value (PCM).
+> **Note:** The KIT_PSE84_HMI supports four PDM microphones. However, this code example is configured to utilize only two microphones.
 
 In this application, the sampling rate is configured to 48 kHz/ksps. The word length of the PDM/PCM Rx buffer and the I2S Tx buffer are set to 16 bits.
 

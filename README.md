@@ -8,10 +8,11 @@ In this code example PSOC&trade; Edge MCU enumerates as a USB Audio Class (UAC) 
 - Consumer control device for volume control
 
 This code example has a three project structure: CM33 secure, CM33 non-secure, and CM55 projects. All three projects are programmed to the external QSPI flash and executed in Execute in Place (XIP) mode. Extended boot launches the CM33 secure project from a fixed location in the external flash, which then configures the protection settings and launches the CM33 non-secure application. Additionally, CM33 non-secure application enables CM55 CPU and launches the CM55 application.
+> **Note:** On the KIT_PSE84_HMI, all three projects are programmed to the external OSPI flash instead of QSPI.
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-psoc-edge-usb-device-audio-playback)
 
-[Provide feedback on this code example.](https://yourvoice.infineon.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzk1MjYiLCJTcGVjIE51bWJlciI6IjAwMi0zOTUyNiIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IEVkZ2UgTUNVOiBBdWRpbyBwbGF5YmFjayB1c2luZyBlbVVTQi1kZXZpY2UiLCJyaWQiOiJhZHZhaXRqaXRlbmRyYS5uZXJsaWthckBpbmZpbmVvbi5jb20iLCJEb2MgdmVyc2lvbiI6IjIuMS4wIiwiRG9jIExhbmd1YWdlIjoiRW5nbGlzaCIsIkRvYyBEaXZpc2lvbiI6Ik1DRCIsIkRvYyBCVSI6IklDVyIsIkRvYyBGYW1pbHkiOiJQU09DIn0=)
+[Provide feedback on this code example.](https://yourvoice.infineon.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzk1MjYiLCJTcGVjIE51bWJlciI6IjAwMi0zOTUyNiIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IEVkZ2UgTUNVOiBBdWRpbyBwbGF5YmFjayB1c2luZyBlbVVTQi1kZXZpY2UiLCJyaWQiOiJhZHZhaXRqaXRlbmRyYS5uZXJsaWthckBpbmZpbmVvbi5jb20iLCJEb2MgdmVyc2lvbiI6IjIuMi4wIiwiRG9jIExhbmd1YWdlIjoiRW5nbGlzaCIsIkRvYyBEaXZpc2lvbiI6Ik1DRCIsIkRvYyBCVSI6IklDVyIsIkRvYyBGYW1pbHkiOiJQU09DIn0=)
 
 See the [Design and implementation](docs/design_and_implementation.md) for the functional description of this code example.
 
@@ -36,7 +37,7 @@ See the [Design and implementation](docs/design_and_implementation.md) for the f
 
 - [PSOC&trade; Edge E84 Evaluation Kit](https://www.infineon.com/KIT_PSE84_EVAL) (`KIT_PSE84_EVAL_EPC2`) – Default value of `TARGET`
 - [PSOC&trade; Edge E84 Evaluation Kit](https://www.infineon.com/KIT_PSE84_EVAL) (`KIT_PSE84_EVAL_EPC4`)
-
+- [PSOC&trade; Edge E84 HMI Kit](https://www.infineon.com/KIT_PSE84_HMI) (`KIT_PSE84_HMI`)
 
 ## Hardware setup
 
@@ -75,7 +76,7 @@ See [Using the code example](docs/using_the_code_example.md) for instructions on
    **Figure 2. USB-device port**
 
    ![](images/kit-usb-device-port.png)
- 
+
 5. On the Windows system, verify that a new USB device is enumerated as a microphone and named as "USB Audio Playback"
 
    **Figure 3. USB audio device enumeration**
@@ -131,6 +132,7 @@ Document title: *CE239526* – *PSOC&trade; Edge MCU: Audio playback using emUSB
  1.x.0   | New code example <br> Early access release
  2.0.0   | GitHub release
  2.1.0   | Updated design files to fix ModusToolbox&trade; v3.7 build warnings
+ 2.2.0   | Added support for KIT_PSE84_HMI
 <br>
 
 
