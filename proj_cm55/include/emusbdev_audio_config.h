@@ -1,10 +1,8 @@
 /******************************************************************************
 * File Name   : emusbdev_audio_config.h
 *
-* Description : This file contains the function prototypes and constants used
-*               in emusbdev_audio_config.c.
-*
-* Note        : See README.md
+* Description : HID report descriptor used by the audio control HID interface.
+*               The USBD_AC audio descriptor is now in usbd_ac_config.h/.c.
 *
 *******************************************************************************
 * (c) 2025-2026, Infineon Technologies AG, or an affiliate of Infineon
@@ -42,23 +40,16 @@
 extern "C" {
 #endif /* __cplusplus */
 
-/*****************************************************************************
-* Headers
-*****************************************************************************/
-#include "USB_Audio.h"
-
+#include "USB.h"
 
 /******************************************************************************
 * Macros
 ******************************************************************************/
-#define USB_NUM_AUDIO_INTERFACES    (2u)
 #define HID_REPORT_PARAMS           (35u)
 
 /******************************************************************************
 * Global variables
 ******************************************************************************/
-extern const USB_DEVICE_INFO usb_deviceInfo;
-extern const USBD_AUDIO_IF_CONF audio_interfaces[USB_NUM_AUDIO_INTERFACES];
 extern const U8 hid_report[HID_REPORT_PARAMS];
 
 #if defined(__cplusplus)
@@ -66,5 +57,4 @@ extern const U8 hid_report[HID_REPORT_PARAMS];
 #endif /* __cplusplus */
 
 #endif /* EMUSBDEV_AUDIO_CONFIG_H */
-
 /* [] END OF FILE */

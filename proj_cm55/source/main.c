@@ -210,7 +210,7 @@ int main(void)
     /* Setup CLIB support library. */
     setup_clib_support();
 
-    /* Setup the LPTimer instance for CM33 CPU. */
+    /* Setup the LPTimer instance for CM55 CPU. */
     setup_tickless_idle_timer();
 
     /* Enable global interrupts. */

@@ -77,8 +77,7 @@ extern "C" {
 * Global variables
 ******************************************************************************/
 /* Task Handlers */
-extern TaskHandle_t rtos_audio_in_task;
-extern TaskHandle_t rtos_audio_out_task;
+extern TaskHandle_t rtos_audio_app_task;
 
 
 #if defined(__cplusplus)

@@ -1,10 +1,9 @@
 /******************************************************************************
 * File Name   : audio_app.h
 *
-* Description : This file contains the function prototypes and constants used 
-*               in audio_app.c.
-*
-* Note        : See README.md
+* Description : This file contains the function prototypes and constants used
+*               in audio_app.c.  Uses the USBD_AC (Audio Class) API with
+*               explicit feedback endpoint for asynchronous clock sync.
 *
 *******************************************************************************
 * (c) 2025-2026, Infineon Technologies AG, or an affiliate of Infineon
@@ -42,25 +41,17 @@
 * Headers
 *****************************************************************************/
 #include "USB.h"
-#include "USB_Audio.h"
+#include "USB_AC.h"
 
 #if defined(__cplusplus)
 extern "C" {
 #endif /* __cplusplus */
 
 /******************************************************************************
-* Macros
-******************************************************************************/
-#define WRITE_TIMEOUT_MS            (10u)
-#define READ_TIMEOUT_MS             (10u)
-
-/******************************************************************************
 * Functions prototypes
 ******************************************************************************/
 void audio_app_init(void);
 void audio_app_task(void *arg);
-
-extern USBD_AUDIO_HANDLE usb_audio_context;
 
 #if defined(__cplusplus)
 }

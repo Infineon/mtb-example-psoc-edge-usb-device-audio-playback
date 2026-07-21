@@ -1,8 +1,7 @@
 /*******************************************************************************
 * File Name: audio_out.h
 *
-*  Description:  This file contains the Audio Out path routine declarations and
-*                constants.
+*  Description:  Audio OUT (speaker) hardware init (I2S/TDM).
 *
 *******************************************************************************
 * (c) 2025-2026, Infineon Technologies AG, or an affiliate of Infineon
@@ -37,25 +36,14 @@
 #ifndef AUDIO_OUT_H
 #define AUDIO_OUT_H
 
-/*****************************************************************************
-* Headers
-*****************************************************************************/
-
+#include <stdbool.h>
 #include <stdint.h>
-#include "Global.h"
+
 #if defined(__cplusplus)
 extern "C" {
 #endif /* __cplusplus */
 
-/*******************************************************************************
-* Functions prototypes
-*******************************************************************************/
-void audio_out_init(void);
-void audio_out_enable(void);
-void audio_out_disable(void);
-void audio_out_process(void *arg);
-void audio_out_endpoint_callback(void *user_context, int num_bytes_received,
-                                 U8 **next_buffer, U32 *packet_size);
+void     audio_out_init(void);
 
 #if defined(__cplusplus)
 }
